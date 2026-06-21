@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://settings"]
+
+[ext_resource type="Script" path="res://scripts/ui/SettingsController.gd" id="1"]
+
+[node name="Settings" type="Control" script=ExtResource("1")]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.05, 0.15, 1)
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 60.0
+offset_right = 100.0
+offset_bottom = 96.0
+text = "SETTINGS"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 28
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -120.0
+offset_right = 200.0
+offset_bottom = 120.0
+theme_override_constants/separation = 16
+
+[node name="SFXRow" type="HBoxContainer" parent="VBox"]
+[node name="SFXLabel" type="Label" parent="VBox/SFXRow"]
+text = "SFX Volume"
+custom_minimum_size = Vector2(120, 0)
+[node name="SFXSlider" type="HSlider" parent="VBox/SFXRow"]
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+custom_minimum_size = Vector2(200, 0)
+
+[node name="MusicRow" type="HBoxContainer" parent="VBox"]
+[node name="MusicLabel" type="Label" parent="VBox/MusicRow"]
+text = "Music Volume"
+custom_minimum_size = Vector2(120, 0)
+[node name="MusicSlider" type="HSlider" parent="VBox/MusicRow"]
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 0.8
+custom_minimum_size = Vector2(200, 0)
+
+[node name="ShakeCheck" type="CheckBox" parent="VBox"]
+text = "Screen Shake"
+button_pressed = true
+
+[node name="BackBtn" type="Button" parent="VBox"]
+text = "Back"
+custom_minimum_size = Vector2(120, 44)

@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://world_map"]
+
+[ext_resource type="Script" path="res://scripts/ui/WorldMapController.gd" id="1"]
+
+[node name="WorldMap" type="Control" script=ExtResource("1")]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.15, 0.1, 1)
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 400.0
+offset_bottom = 44.0
+text = "World Map — Choose an Encounter"
+theme_override_font_sizes/font_size = 20
+
+[node name="PlayerInfo" type="PanelContainer" parent="."]
+anchor_bottom = 1.0
+offset_right = 200.0
+offset_bottom = -20.0
+offset_top = 60.0
+
+[node name="VBox" type="VBoxContainer" parent="PlayerInfo"]
+[node name="NameLabel" type="Label" parent="PlayerInfo/VBox"]
+text = "Hero"
+theme_override_font_sizes/font_size = 16
+
+[node name="LevelLabel" type="Label" parent="PlayerInfo/VBox"]
+text = "Level 1"
+
+[node name="HPLabel" type="Label" parent="PlayerInfo/VBox"]
+text = "HP: 100 / 100"
+
+[node name="GoldLabel" type="Label" parent="PlayerInfo/VBox"]
+text = "Gold: 0"
+
+[node name="MenuBtn" type="Button" parent="."]
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -44.0
+offset_right = 160.0
+offset_bottom = -8.0
+text = "Main Menu"

@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://main_menu"]
+
+[ext_resource type="Script" path="res://scripts/ui/MainMenuController.gd" id="1"]
+
+[node name="MainMenu" type="Control" script=ExtResource("1")]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.05, 0.15, 1)
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 80.0
+offset_right = 200.0
+offset_bottom = 140.0
+text = "PUZZLE QUEST"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 48
+
+[node name="Subtitle" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 140.0
+offset_right = 200.0
+offset_bottom = 170.0
+text = "Match Gems. Cast Spells. Conquer."
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 16
+modulate = Color(0.7, 0.7, 0.9, 1)
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -80.0
+offset_right = 120.0
+offset_bottom = 120.0
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="NewGameBtn" type="Button" parent="VBox"]
+text = "New Game"
+custom_minimum_size = Vector2(240, 48)
+
+[node name="ContinueBtn" type="Button" parent="VBox"]
+text = "Continue"
+custom_minimum_size = Vector2(240, 48)
+
+[node name="SettingsBtn" type="Button" parent="VBox"]
+text = "Settings"
+custom_minimum_size = Vector2(240, 48)
+
+[node name="QuitBtn" type="Button" parent="VBox"]
+text = "Quit"
+custom_minimum_size = Vector2(240, 48)
+
+[node name="VersionLabel" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+horizontal_alignment = 2
+vertical_alignment = 2
+text = "v1.0.0"
+modulate = Color(0.5, 0.5, 0.5, 1)
